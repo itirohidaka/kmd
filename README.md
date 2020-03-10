@@ -22,7 +22,7 @@ Este tutorial assume que você tem acesso ao [Amazon Web Services (AWS)](https:/
 * [12 - Smoke Test](docs/12-smoke-test.md)
 * [13 - Limpando Tudo!](docs/13-cleanup.md)
 
-> Este documento foi criado com base no original [KTHW](https://github.com/kelseyhightower/kubernetes-the-hard-way) mas modificado e adaptado para a utilização da AWS como infraestrutura base. Alguns trechos do documento também foram modificados para atender as minhas necessidades de aprendizado.
+> Este documento foi criado com base no original [KTHW](https://github.com/kelseyhightower/kubernetes-the-hard-way) mas modificado e adaptado para a utilização da plataforma de núvem pública da AWS como infraestrutura. Alguns trechos do documento também foram modificados para atender as minhas necessidades de aprendizado durante o estudo para a certificação [CKA da CNCF](https://www.cncf.io/certification/cka/).
 
 ## Detalhes do Cluster
 
