@@ -9,9 +9,9 @@ Este tutorial utiliza a plataforma de núvem pública da [Amazon Web Services](h
 
 ### 00.01 - Instalando o AWS CLI (Command Line Interface) no seu desktop/laptop.
 
-Siga a documentação do [AWS CLI](https://aws.amazon.com/cli) para instalar e configurar o utilitário de linha de comando da `aws` no seu desktop/laptop.
+Siga a documentação oficial do [AWS CLI](https://aws.amazon.com/cli) para instalar e configurar o utilitário de linha de comando da `aws` no seu desktop/laptop.
 
-Verificar se o AWS CLI está instalado corretamente:
+Verificar se o AWS CLI está instalado corretamente. No terminal, utilizar o seguinte comando:
 
 ```
 aws --version
@@ -25,7 +25,7 @@ OBS: No momento da elaboração deste documento eu utilizo a versão 1.16.130.
 > Além da instação do AWS CLI siga a [documentação oficial](https://aws.amazon.com/cli/) para a configuração do mesmo.
 
 ### 00.02 - Definir uma Região padrão
-Após definir as configurações iniciais do AWS CLI (Access Key ID e Secret Access Key0, definir a região padrão através dos dois comandos abaixo. Neste exemplo considero a utilização da região sa-east-1, ou seja South America - São Paulo.
+Após definir as configurações iniciais do AWS CLI (Access Key ID e Secret Access Key), definir a região padrão através dos dois comandos abaixo. Neste exemplo considero a utilização da região sa-east-1, ou seja South America - São Paulo.
 ```
 AWS_REGION=sa-east-1
 ```
