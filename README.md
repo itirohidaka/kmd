@@ -1,5 +1,5 @@
 # Kubernetes no Modo Difícil (KMD)
-Este tutorial tem o objetivo de implementar um Kubernetes no Modo Difícil (KMD) . Este guia NÃO foi craido para pessoas que procuram um comando totalmente automatizado para implementar um cluster Kubernetes. O KMD foi criado para o aprendizado, ou seja, é a rota mais longa de implementação do Kubernetes, com o intuito de você aprender cada tarefa requerida para o bootstrap do cluster.
+Este tutorial tem o objetivo de implementar um Kubernetes no Modo Difícil (KMD) . Este guia NÃO foi craido para pessoas que procuram um comando totalmente automatizado para implementar um cluster Kubernetes (K8s). O KMD foi criado para o aprendizado, ou seja, é a rota mais longa de implementação do Kubernetes, com o intuito de você aprender cada tarefa requerida para o bootstrap do cluster.
 
 > Os resultados deste tutorial NÃO devem ser vistos como production ready!!!
 
@@ -24,7 +24,8 @@ Este tutorial assume que você tem acesso ao [Amazon Web Services (AWS)](https:/
 
 > Este documento foi criado com base no original [KTHW](https://github.com/kelseyhightower/kubernetes-the-hard-way) mas modificado e adaptado para a utilização da plataforma de núvem pública da AWS como infraestrutura. Alguns trechos do documento também foram modificados para atender as minhas necessidades de aprendizado durante o estudo para a certificação [CKA da CNCF](https://www.cncf.io/certification/cka/).
 
-## Detalhes do Cluster
+## Detalhes do Cluster K8s
+Componentes e suas respectivas versões utilizadas na construção do Kubernetes no Modo Difícil.
 
 * [kubernetes](https://github.com/kubernetes/kubernetes) 1.17.2
 * [containerd](https://github.com/containerd/containerd) 1.3.2
