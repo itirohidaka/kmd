@@ -19,13 +19,13 @@ LNI=$(echo $NI | wc -c)
 
 i=0
 i=$((LNI))
-echo -n "Aguardando a exclusão das Network Interfaces..."
+echo "Aguardando a exclusão das Network Interfaces..."
 while [ $i -ne 3 ]
 do
    NI=$(aws ec2 describe-network-interfaces --filters "Name=group-name,Values=kubernetes" --query "NetworkInterfaces[].Groups[].GroupName")
    LNI=$(echo $NI | wc -c)
    i=$((LNI))
-   echo -n "."
+   echo "."
    sleep 5
 done
 
