@@ -25,7 +25,7 @@ do
    NI=$(aws ec2 describe-network-interfaces --filters "Name=group-name,Values=kubernetes" --query "NetworkInterfaces[].Groups[].GroupName")
    LNI=$(echo $NI | wc -c)
    i=$((LNI))
-   echo "."
+   echo "Aguardando exclusão das NetInterfaces... $LNI"
    sleep 5
 done
 
