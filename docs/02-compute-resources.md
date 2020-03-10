@@ -151,13 +151,13 @@ KUBERNETES_PUBLIC_ADDRESS=$(aws elbv2 describe-load-balancers \
   --output text --query 'LoadBalancers[].DNSName')
 ```
 
-## Atividade 02.02 - Instâncias Computacionais
+## Atividade 02.02 - Instâncias Computacionais (EC2)
 
-As instâncias computacionais neste tutorial serão provisionadas usando o [Ubuntu Server](https://www.ubuntu.com/server) 18.04, que oferece um bom suporte para o [containerd container runtime](https://github.com/containerd/containerd). Cada instância computacional será provisionada com um endereço IP privado fixo para simplificar o processo de inicialização do Kubernetes.
+As instâncias computacionais neste tutorial serão provisionadas usando o [Ubuntu Server](https://www.ubuntu.com/server) 18.04 como sistema operacional, que oferece um bom suporte para o [ContainerD container runtime](https://github.com/containerd/containerd). Cada instância computacional será provisionada com um endereço IP, privado e fixo, para simplificar o processo de inicialização do Kubernetes.
 
-### Tarefa 02.02.01 - Definindo a Imagem das Instâncias
+### Tarefa 02.02.01 - Definindo a Imagem das Instâncias Computacionais
 
-Definiremos a imagem através do(s) comando(s) abaixo:
+Definiremos a imagem das instâncias computacionais através do comando abaixo:
 ```
 IMAGE_ID=$(aws ec2 describe-images --owners 099720109477 \
   --filters \
@@ -169,7 +169,7 @@ IMAGE_ID=$(aws ec2 describe-images --owners 099720109477 \
 
 ### Tarefa 02.02.02 - Criando o SSH Key Pair
 
-Um par de chaves será utilizado para o acesso seguro as Instâncias Virtuais. Para criar o SSH Key Pair utilizando o(s) comando(s) abaixo:
+Um par de chaves será utilizado para o acesso seguro as Instâncias Computacionais. Para criar o SSH Key Pair utilize o(s) comando(s) abaixo:
 ```
 aws ec2 create-key-pair --key-name kubernetes --output text --query 'KeyMaterial' > kubernetes.id_rsa
 ```
@@ -177,9 +177,9 @@ aws ec2 create-key-pair --key-name kubernetes --output text --query 'KeyMaterial
 chmod 600 kubernetes.id_rsa
 ```
 
-### Tarefa 02.02.03 - Criando os Controllers
+### Tarefa 02.02.03 - Criando os Controller Nodes
 
-Criar 3 instâncias computacionais, do tipo t3.micro, utilizando o(s) comando(s) abaixo. Esses instâncias farão o papel de Kubernetes Controllers.
+Criar 3 instâncias computacionais, do tipo t3.micro, utilizando o(s) comando(s) abaixo. Esses instâncias computacionais farão o papel de Kubernetes Controller Node.
 
 ```
 for i in 0 1 2; do
@@ -201,7 +201,7 @@ for i in 0 1 2; do
 done
 ```
 
-### Tarefa 02.02.03 - Criando os Workers
+### Tarefa 02.02.03 - Criando os Worker Nodes
 
 Cada Worker Node requer uma alocação de sub-rede para os PODs no intervalo CIDR do cluster Kubernetes. A alocação de sub-rede dos PODs será usada para configurar a rede de contêineres em um tutorial posterior. Os metadados da instância `pod-cidr` serão usados para expor as alocações da sub-rede do pod para as instâncias computacionais em tempo de execução (runtime).
 
