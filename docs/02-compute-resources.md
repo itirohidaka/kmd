@@ -47,7 +47,7 @@ SUBNET_ID=$(aws ec2 create-subnet \
 aws ec2 create-tags --resources ${SUBNET_ID} --tags Key=Name,Value=kubernetes
 ```
 
-> O range de IPs `10.0.1.0/24` poderá ter até 254 instancias computacionais.
+> O range de IPs `10.0.1.0/24` poderá ter até 253 instancias computacionais.
 
 ### Tarefa 02.01.03 - Criando o Internet Gateway
 
