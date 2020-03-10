@@ -15,7 +15,21 @@ TARGET_GROUP_ARN=$(aws elbv2 describe-target-groups --name kubernetes --output t
 aws elbv2 delete-target-group --target-group-arn "${TARGET_GROUP_ARN}"
 
 echo "Aguardando a exclusão do LB..."
-sleep 180
+NI=$(aws ec2 describe-network-interfaces --filters "Name=group-name,Values=kubernetes" --query "NetworkInterfaces[].Groups[].GroupName")
+echo $NI
+LNI=$(echo $NI | wc -c)
+echo $LNI
+
+i=0
+i=$((LNI))
+while [ $i -ne 3 ]
+do
+   NI=$(aws ec2 describe-network-interfaces --filters "Name=group-name,Values=kubernetes" --query "NetworkInterfaces[].Groups[].GroupName")
+   LNI=$(echo $NI | wc -c)
+   i=$((LNI))
+   echo "."
+   sleep 5
+done
 
 SECURITY_GROUP_ID=$(aws ec2 describe-security-groups --filters "Name=tag:Name,Values=kubernetes" --output text --query 'SecurityGroups[].GroupId')
 aws ec2 delete-security-group --group-id "${SECURITY_GROUP_ID}"
