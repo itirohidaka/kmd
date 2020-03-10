@@ -1,6 +1,6 @@
-# Instalando os Client Tools
+# Sessão 01 - Instalando as Ferramentas de Cliente (Client Tools)
 
-Neste tutorial, você instalará os utilitários de linha de comando necessários para concluir este tutorial. São ele o [cfssl](https://github.com/cloudflare/cfssl), [cfssljson](https://github.com/cloudflare/cfssl), e [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl).
+Neste tutorial, você instalará os utilitários de linha de comando necessários para conclui-lo. São eles o [cfssl](https://github.com/cloudflare/cfssl), [cfssljson](https://github.com/cloudflare/cfssl), e [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl).
 
 > Todos os comandos deste tutorial deverão ser executados no seu desktop/laptop.
 
