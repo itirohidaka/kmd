@@ -3,14 +3,6 @@ Este tutorial tem o objetivo de implementar um Kubernetes no Modo Difícil (KMD)
 
 > Os resultados deste tutorial NÃO devem ser vistos como production ready e podem receber suporte limitado da comunidade, mas não deixe que isso o impeça de aprender!
 
-## Detalhes do Cluster
-
-* [kubernetes](https://github.com/kubernetes/kubernetes) 1.17.2
-* [containerd](https://github.com/containerd/containerd) 1.3.2
-* [coredns](https://github.com/coredns/coredns) v1.6.2
-* [cni](https://github.com/containernetworking/cni) v0.8.5
-* [etcd](https://github.com/coreos/etcd) v3.3.18
-
 ## Sessões
 
 Este tutorial assume que você tem acesso ao [Amazon Web Services (AWS)](https://aws.amazon.com). Embora a AWS seja usada para requisitos básicos de infraestrutura, as lições aprendidas neste tutorial podem ser aplicadas a outras plataformas, com algumas poucas adaptações.
@@ -31,6 +23,14 @@ Este tutorial assume que você tem acesso ao [Amazon Web Services (AWS)](https:/
 * [13 - Limpando Tudo!](docs/13-cleanup.md)
 
 > Este documento foi criado com base no original [KTHW](https://github.com/kelseyhightower/kubernetes-the-hard-way) mas modificado e adaptado para a utilização da AWS como infraestrutura base. Alguns trechos do documento também foram modificados para atender as minhas necessidades de aprendizado.
+
+## Detalhes do Cluster
+
+* [kubernetes](https://github.com/kubernetes/kubernetes) 1.17.2
+* [containerd](https://github.com/containerd/containerd) 1.3.2
+* [coredns](https://github.com/coredns/coredns) v1.6.2
+* [cni](https://github.com/containernetworking/cni) v0.8.5
+* [etcd](https://github.com/coreos/etcd) v3.3.18
 
 ## Copyright
 
