@@ -6,7 +6,7 @@ Neste tutorial, você instalará os utilitários de linha de comando necessário
 
 ## 01.01 - Instalação do CFSSL e o CFSSLJSON
 
-Os utilitários de linha de comando `cfssl` e `cfssljson` serão usados para provisionar uma [PKI Infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) e gerar os certificados TLS.
+Os utilitários de linha de comando `cfssl` e `cfssljson` serão utilizados para provisionar uma [PKI Infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) e gerar os certificados TLS.
 
 Faça o download e instale `cfssl` e `cfssljson`, utilizando os comandos abaixo:
 
