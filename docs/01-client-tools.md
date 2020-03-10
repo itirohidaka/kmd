@@ -57,7 +57,7 @@ Verifique se as versões do `cfssl` e do `cfssljson` 1.3.4 ou superior estão in
 cfssl version
 ```
 
-> output
+> Saída (Exemplo)
 
 ```
 Version: 1.3.4
