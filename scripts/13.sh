@@ -7,6 +7,7 @@ aws ec2 terminate-instances \
       --filter "Name=tag:Name,Values=controller-0,controller-1,controller-2,worker-0,worker-1,worker-2" \
       --output text --query 'Reservations[].Instances[].InstanceId')
 aws ec2 delete-key-pair --key-name kubernetes
+aws ec2 delete-tags --resources $(aws ec2 describe-instances --filters "Name=tag:Name,Values=controller-0,controller-1,controller-2,worker-0,worker-1,worker-2" --output text --query 'Reservations[].Instances[].InstanceId')
 
 echo "Tarefa 13.01.02 - Excluindo os componentes de Rede"
 LOAD_BALANCER_ARN=$(aws elbv2 describe-load-balancers --name kubernetes --output text --query 'LoadBalancers[].LoadBalancerArn')
